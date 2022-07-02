@@ -4,7 +4,7 @@ import App from "./App";
 import Login from "./Login";
 import {BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
-
+import SignUp from "./SignUp";
 
 
 function Copyright() {
@@ -28,6 +28,9 @@ class AppRouter extends React.Component {
                 
               </Route>
               <Route path="/" element={<App/>}>
+                
+              </Route>
+              <Route path="/signup" element={<SignUp/>}>
                 
               </Route>
             </Routes>

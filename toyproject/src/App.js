@@ -4,9 +4,10 @@ import Todo from './Todo';
 import AddTodo from './AddTodo'
 import React from 'react';
 import { API_BASE_URL } from "./app-config";
-import { call } from './ApiService';
+import { call, signout } from './ApiService';
+import { Button } from '@mui/material';
 
-
+const ACCESS_TOKEN = "ACCESS_TOKEN";
 
 class App extends React.Component{
   
@@ -39,7 +40,6 @@ class App extends React.Component{
   }
  
   
-
   
  
 
@@ -49,6 +49,7 @@ class App extends React.Component{
     ))
     return(
       <>
+      <Button color="inherit" onClick={signout}>로그아웃</Button>
       <AddTodo add={this.add}/>
        <div>{todoItems}</div>
       
